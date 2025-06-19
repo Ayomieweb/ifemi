@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    min-width: 100%;
+    min-height: 100vh; 
+    background: linear-gradient(to right,#00a9f2,#172d9d);
+    overflow-x: hidden;
+}
+
+.WRIPPER{
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+ main{
+    width: 90%;
+    max-width: 1028px;
+    margin: auto;
+ }
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8rem;
+    height: 10rem;
+    background-color: #efbf6a;
+    border-radius: 20px 60px 0 ;
+    z-index: -1;
+    animation: ife 7s ease-in-out infinite;
+}
+
+@keyframes ife{
+    from{
+        transform: translateY(400px) rotate(150deg);
+    }
+    to{
+        transform: translateX(0) rotate(0);
+    }
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+    width: 8rem;
+    height: 10rem;
+    background-color: #ebebdf;
+    border-radius: 0 60px 20px ;
+     animation: ifemi 7s ease-in-out infinite;
+     z-index: -1;
+}
+@keyframes ifemi{
+    from{
+        transform: translateY(-400px) rotate(150deg);
+    }
+    to{
+        transform: translateY(0) rotate(0);
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+ body::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 7rem;
+    height: 5rem;
+    background-color: #efbf6a;
+    border-radius: 20px 60px 0  ;
+    z-index: -1;
+}
+body::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 7rem;
+    height: 5rem;
+    background-color: #ebebdf;
+    border-radius: 0 60px 20px ;
+}
+   body{
+    overflow-x: hidden;
+   }
+}
+
+header{
+    background-color: #7698ae3b;
+    height: 4vh;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: whitesmoke;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width:768px) {
+    main{
+        overflow: hidden;
+    }
+      
+}
